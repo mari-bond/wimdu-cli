@@ -7,7 +7,7 @@ class Cli < Thor
     exit 1
   end
 
-  desc "list", "Returns list of completed places"
+  desc "list", "Display list of completed places"
   def list
     places = Place.completed
     if places.any?
@@ -17,14 +17,14 @@ class Cli < Thor
     end
   end
 
-  desc "new", "Builds new place"
+  desc "new", "Create new place"
   def new
     @place = Place.new
     puts "Starting with new property #{@place.id}"
     collect_data
   end
 
-  desc "continue", "Continue entering place info"
+  desc "continue #id", "Continue entering place info"
   def continue(id)
     @place = Place.find(id)
     if @place
