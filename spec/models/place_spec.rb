@@ -1,5 +1,5 @@
 require "spec_helper"
-require './place'
+require './models/place'
 
 RSpec.describe "Place" do
   let(:place) { stub_model(Place).as_new_record }

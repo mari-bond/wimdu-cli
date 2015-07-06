@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require "thor"
-require_relative 'place'
+require './models/place'
 
 class Cli < Thor
   Signal.trap("INT") do

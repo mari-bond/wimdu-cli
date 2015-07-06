@@ -1,5 +1,5 @@
 require "spec_helper"
-require './place'
+require './models/place'
 
 RSpec.describe "CLI" do
   let(:exe) { File.expand_path('../../cli.rb', __FILE__) }
