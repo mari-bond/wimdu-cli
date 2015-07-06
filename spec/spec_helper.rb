@@ -1,4 +1,5 @@
 require_relative "support/cli_process"
+require 'rspec/active_model/mocks'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -20,6 +21,8 @@ RSpec.configure do |config|
   end
 
   config.order = :random
+
+  config.color = true
 
   Kernel.srand config.seed
 end
